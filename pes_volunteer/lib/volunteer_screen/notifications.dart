@@ -39,6 +39,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       resizeToAvoidBottomInset: false,
       // drawer: SideDrawer(),
       appBar: AppBar(
+        
         elevation: 0,
         centerTitle: true,
         title: const Text(

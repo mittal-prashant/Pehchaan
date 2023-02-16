@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
           RefreshController(initialRefresh: false),
       _listRefreshController = RefreshController(initialRefresh: false);
 
-  Color appBarColor = Color(0xff274D76);
+  Color appBarColor = Colors.black;
 
   @override
   void initState() {
@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Icon(
                       Icons.circle,
                       size: 14,
-                      color: Colors.redAccent,
+                      color: Colors.red,
                     ),
                   ),
                 );
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
           SizedBox(
-            width: 40,
+            width: 20,
           )
         ],
         elevation: 0,
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
-            fontFamily: "Roboto",
+            fontFamily:"",
             fontWeight: FontWeight.w700,
           ),
         ),

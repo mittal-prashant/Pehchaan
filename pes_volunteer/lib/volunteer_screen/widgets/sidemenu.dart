@@ -13,16 +13,17 @@ class SideDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: <Widget>[
-          const DrawerHeader(
+          Container(
+            height: 200,
             child: Center(
               child: Text(
                 'Volunteer',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                style: TextStyle(color: Colors.white, fontSize: 30),
               ),
             ),
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 59, 58, 58),
+              color: Colors.black,
             ),
           ),
           // ListTile(

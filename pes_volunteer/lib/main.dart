@@ -3,6 +3,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pes/router.dart';
+import 'package:flutter/services.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
@@ -10,6 +11,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 }
 
 void main() async {
+  // SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
@@ -52,6 +54,8 @@ class PehchaanApp extends StatefulWidget {
 class _PehchaanAppState extends State<PehchaanApp> {
   @override
   void initState() {
+    // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+    //     overlays: [SystemUiOverlay.bottom]);
     super.initState();
     var initializationSettingsAndroid =
         new AndroidInitializationSettings('ic_launcher');
@@ -121,7 +125,7 @@ class _PehchaanAppState extends State<PehchaanApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Roboto",
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
       ),
       onGenerateRoute: widget.router!.generateRoute,
     );
